@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav ul.li.a.active {
+  @apply text-[#FF5050];
+}
+.container {
+  width: 100%;
+  max-width: 1408px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+/* Submenu parent li */
+.group {
+  position: relative;
+}
+
+/* Submenu ul */
+.group ul {
+  position: absolute;
+  top: 100%; /* Parentning tagida ko'rinsin */
+  left: 0;
+  width: 220px; /* Submenu kengligi */
+  height: auto;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none; /* Defaultda yashirin */
+  z-index: 10;
+}
+
+/* Hover bo'lganda menyu ko'rinsin */
+.group:hover ul,
+.group ul:hover {
+  display: block;
+}
+
+/* Submenu elementlari */
+.group ul li {
+  width: 100%; /* To'liq kenglikni oladi */
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Hover bo'lganda fon rangi */
+.group ul li:hover {
+  background-color: #f3f3f3;
+}
+
+/* Linklar dizayni */
+.group ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  width: 100%;
+}
+
+/* Link hover effekti */
+.group ul li a:hover {
+  color: #ff5050; /* Hover bo'lganda rang o'zgarishi */
+}
+
+.swiper-button-prev{
+  
+}
+
+.swiper-button-next{
+
+}
